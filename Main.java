@@ -6,14 +6,14 @@ public class Main {
         UsbCCharger modernCharger = new ModernCharger();
 
 
-        String oldChargerHtml = "<div id=\"chargerType\">Old Round Pin Charger</div>";
-        UsbCCharger adapterHtml = new ChargerAdapter(oldChargerHtml);
+        OldCharger oldCharger = new OldCharger();
+        UsbCCharger adapter = new ChargerAdapter(oldCharger.oldChargerHtml);
 
 
 
 
         phone.plugIn(modernCharger);
-        laptop.plugIn(adapterHtml);
+        laptop.plugIn(adapter);
 
 
     }
